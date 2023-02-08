@@ -3,7 +3,7 @@ package graphicEditor;
 import java.awt.*;
 import java.util.Objects;
 
-public class Quad extends Shape implements Drawable, Colorable, Borderable, Scalable {
+public class Text extends Shape implements Drawable, Colorable, Scalable {
     private static final int numberOfVertices = 4;
     private double x;
     private double y;
@@ -11,20 +11,11 @@ public class Quad extends Shape implements Drawable, Colorable, Borderable, Scal
     //////////shape override//////////
     @Override
     protected String getName() {
-        return "Quad";
+        return "Text";
     }
     @Override
     public String getNumberOfVertices() {
         return "Number of vertices: " + numberOfVertices;
-    }
-    //////////borderable override//////////
-    @Override
-    public double getBorderWidth() {
-        return 0;
-    }
-    @Override
-    public Color getBorderColor() {
-        return null;
     }
     //////////colorable override//////////
     @Override
@@ -62,10 +53,10 @@ public class Quad extends Shape implements Drawable, Colorable, Borderable, Scal
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Quad parameter = (Quad) o;
+        Text parameter = (Text) o;
         return x == parameter.x &&
                 y == parameter.y &&
-                getName().equals(((Quad) o).getName());
+                getName().equals(((Text) o).getName());
     }
     @Override
     public int hashCode () {
