@@ -3,8 +3,8 @@ package graphicEditor;
 import java.awt.*;
 import java.util.Objects;
 
-public class Text extends Shape implements Drawable, Colorable, Scalable {
-    private static final int numberOfVertices = 4;
+public class Text extends Shape implements Drawable, Scalable {
+    private static final int NUMBER_OF_VERTICES = 4;
     private double x;
     private double y;
 
@@ -15,12 +15,7 @@ public class Text extends Shape implements Drawable, Colorable, Scalable {
     }
     @Override
     public String getNumberOfVertices() {
-        return "Number of vertices: " + numberOfVertices;
-    }
-    //////////colorable override//////////
-    @Override
-    public Color getColor() {
-        return null;
+        return "Number of vertices: " + NUMBER_OF_VERTICES;
     }
     //////////scalable override//////////
     @Override
@@ -28,6 +23,10 @@ public class Text extends Shape implements Drawable, Colorable, Scalable {
         return 0;
     }
     //////////drawable override//////////
+    @Override
+    public Color getColor() {
+        return Color.black;
+    }
     @Override
     public void setX(double x) {
         this.x = x;

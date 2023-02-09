@@ -3,8 +3,8 @@ package graphicEditor;
 import java.awt.*;
 import java.util.Objects;
 
-public class Point extends Shape implements Drawable, Colorable {
-    private static final int numberOfVertices = 1;
+public class Point extends Shape implements Drawable {
+    private static final int NUMBER_OF_VERTICES = 1;
     private double x;
     private double y;
 
@@ -15,14 +15,13 @@ public class Point extends Shape implements Drawable, Colorable {
     }
     @Override
     public String getNumberOfVertices() {
-        return "Number of vertices: " + numberOfVertices;
-    }
-    //////////colorable override//////////
-    @Override
-    public Color getColor() {
-        return null;
+        return "Number of vertices: " + NUMBER_OF_VERTICES;
     }
     //////////drawable override//////////
+    @Override
+    public Color getColor() {
+        return Color.black;
+    }
     @Override
     public void setX(double x) {
         this.x = x;

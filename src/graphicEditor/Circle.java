@@ -3,8 +3,8 @@ package graphicEditor;
 import java.awt.*;
 import java.util.Objects;
 
-public class Circle extends Shape implements Drawable, Colorable, Borderable, Scalable {
-    private static final int numberOfVertices = 0;
+public class Circle extends Shape implements Drawable, Borderable, Scalable {
+    private static final int NUMBER_OF_VERTICES = 0;
     private double x;
     private double y;
 
@@ -15,21 +15,16 @@ public class Circle extends Shape implements Drawable, Colorable, Borderable, Sc
     }
     @Override
     public String getNumberOfVertices() {
-        return "Number of vertices: " + numberOfVertices;
+        return "Number of vertices: " + NUMBER_OF_VERTICES;
     }
     //////////borderable override//////////
     @Override
     public double getBorderWidth() {
-        return 0;
+        return 1;
     }
     @Override
     public Color getBorderColor() {
-        return null;
-    }
-    //////////colorable override//////////
-    @Override
-    public Color getColor() {
-        return null;
+        return Color.black;
     }
     //////////scalable override//////////
     @Override
@@ -37,6 +32,10 @@ public class Circle extends Shape implements Drawable, Colorable, Borderable, Sc
         return 0;
     }
     //////////drawable override//////////
+    @Override
+    public Color getColor() {
+        return Color.white;
+    }
     @Override
     public void setX(double x) {
         this.x = x;
